@@ -1,0 +1,10 @@
+.idea/
+
+venv/
+
+build/
+dist/
+*.egg-info/
+
+__pychahe__/
+*.pyc
