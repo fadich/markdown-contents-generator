@@ -4,11 +4,11 @@ Generate contents for markdown files.
 
 <contents-start />
 
-- [Installation](#Installation)
-  - [Install from Source:](#Install+from+Source:)
-- [Usage](#Usage)
-  - [Generate Contents](#Generate+Contents)
-  - [Insert Contents](#Insert+Contents)
+- [Installation](#installation)
+  - [Install from Source:](#installfromsource)
+- [Usage](#usage)
+  - [Generate Contents](#generatecontents)
+  - [Insert Contents](#insertcontents)
 
 <contents-finish />
 
@@ -19,7 +19,7 @@ Install via python _pip_
 pip install markdown-contents-generator
 ```
 
-### Install from Source:
+### Install from Source
 
 Clone git-repository and make setup inside the project directory
 ```shell
@@ -33,4 +33,4 @@ python setup.py
 
 ### Generate Contents
 
-### Insert Contents
+### Insert Contents into a /file
