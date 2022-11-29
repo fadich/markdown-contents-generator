@@ -5,6 +5,7 @@ Generate table of contents for markdown files.
 <contents-start />
 
 - [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
   - [Install from Source](#install-from-source)
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
@@ -14,6 +15,8 @@ Generate table of contents for markdown files.
 <contents-finish />
 
 ## Installation
+
+### Install via PIP
 
 Install via python _pip_ (python3 required):
 ```shell
@@ -47,8 +50,9 @@ md-contents-generator README.md
 ```
 
 You will see something like that (for this README.md file):
-```shell
+```markdown
 - [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
   - [Install from Source](#install-from-source)
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
@@ -68,24 +72,22 @@ md-contents-generator README.md --insert
 This will automatically insert auto-generated contents inside the _contents tags_. So, before calling this command, add these tags to your markdown file:
 ```markdown
 ...
-...
 
 <contents-start />
                      <--- Your table of contents will be inserted right here
 <contents-finish />
 
 ...
-...
 ```
 
 Result should be like this:
 ```markdown
 ...
-...
 
 <contents-start />
 
 - [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
   - [Install from Source](#install-from-source)
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
@@ -94,7 +96,6 @@ Result should be like this:
 
 <contents-finish />
 
-...
 ...
 ```
 
