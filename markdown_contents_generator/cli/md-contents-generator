@@ -12,13 +12,22 @@ from markdown_contents_generator.contents_builder import ContentsBuilder
 from markdown_contents_generator.contents_parser import ContentsParser
 
 
+class ArgumentParser(argparse.ArgumentParser):
+
+    def error(self, message):
+        sys.stderr.write(f"error: {message}\n")
+        self.print_help()
+        sys.exit(2)
+
+
 def main():
-    parser = argparse.ArgumentParser(
-        description="Generate contents for readme.md files."
+    parser = ArgumentParser(
+        description="Generate contents for markdown files (*.md).",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument(
         dest="path",
-        metavar="PATH",
+        metavar="MARKDOWN_FILEPATH",
         help="Path to markdown file"
     )
     parser.add_argument(
@@ -26,28 +35,29 @@ def main():
         metavar="LEVEL",
         type=int,
         default=4,
-        help="Lower header level (default: 4)"
+        help="Lower header level (default: %(default)s)"
     )
     parser.add_argument(
         "-g", "--higher-level",
         metavar="LEVEL",
         type=int,
         default=2,
-        help="Higher header level (default: 2)"
+        help="Higher header level (default: %(default)s)"
     )
     parser.add_argument(
         "-m", "--margin",
         metavar="MARGIN",
         type=str,
         default="  ",
-        help="Margin string (default: \"  \" [SPACE+SPACE])"
+        help="Margin string (default: \"%(default)s\" [TWO SPACES])"
     )
     parser.add_argument(
         "-p", "--prefix",
         metavar="PREFIX",
         type=str,
         default="- ",
-        help="After margin prefix string (default: \"- \" [DASH+SPACE])"
+        help="After margin prefix string "
+             "(default: \"%(default)s\" [DASH+SPACE])"
     )
     parser.add_argument(
         "-i", "--insert",
@@ -58,12 +68,12 @@ def main():
         "--replace-tags",
         action="store_true",
         help="Remove contents tags from the target file "
-             "(when insert flag provided)"
+             "(when inserting into a file)"
     )
     parser.add_argument(
         "--force-margin", "--save-margin",
         action="store_true",
-        help="Save margin for higher level, if it is greater then 1"
+        help="Save margin for items level (if higher level isn't 1)"
     )
     parser.add_argument(
         "--debug",

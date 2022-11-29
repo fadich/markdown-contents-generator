@@ -1,22 +1,23 @@
 # Markdown Contents Generator
 
-Generate contents for markdown files.
+Generate table of contents for markdown files.
 
 <contents-start />
 
 - [Installation](#installation)
   - [Install from Source](#install-from-source)
 - [Usage](#usage)
-  - [Generate Contents](#generate-contents)
-  - [Insert Contents into a file](#insert-contents-into-a-file)
+  - [Generate Table of Contents](#generate-table-of-contents)
+  - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
+    - [Replace Contents Tags](#replace-contents-tags)
 
 <contents-finish />
 
 ## Installation
 
-Install via python _pip_:
+Install via python _pip_ (python3 required):
 ```shell
-pip install markdown-contents-generator
+pip install markdown-contents-generator --user
 ```
 
 ### Install from Source
@@ -26,11 +27,86 @@ Clone git-repository and make setup inside the project directory:
 git clone https://github.com/fadich/markdown-contents-generator.git \
   && cd markdown-contents-generator
 
-python setup.py
+python3 setup.py install
 ```
 
 ## Usage
 
-### Generate Contents
+Once the package installed, it provides a console command:
+```shell
+md-contents-generator
+```
 
-### Insert Contents into a file
+You can call it with no arguments to view the instructions. The only required parameter is a path to the markdown file which table of contents you're going to generate.
+
+### Generate Table of Contents
+
+By proving `MARKDOWN_FILEPATH` positional parameter, you can generate its contents and check the console output results. For example:
+```shell
+md-contents-generator README.md
+```
+
+You will see something like that (for this README.md file):
+```shell
+- [Installation](#installation)
+  - [Install from Source](#install-from-source)
+- [Usage](#usage)
+  - [Generate Table of Contents](#generate-table-of-contents)
+  - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
+    - [Replace Contents Tags](#replace-contents-tags)
+```
+
+You can copy-paste it to the file you need or make auto-insertion to your working file (see below).
+
+### Insert Table of Contents into a File
+
+Command can be called with optional `--insert` flag:
+```shell
+md-contents-generator README.md --insert
+```
+
+This will automatically insert auto-generated contents inside the _contents tags_. So, before calling this command, add these tags to your markdown file:
+```markdown
+...
+...
+
+<contents-start />
+                     <--- Your table of contents will be inserted right here
+<contents-finish />
+
+...
+...
+```
+
+Result should be like this:
+```markdown
+...
+...
+
+<contents-start />
+
+- [Installation](#installation)
+  - [Install from Source](#install-from-source)
+- [Usage](#usage)
+  - [Generate Table of Contents](#generate-table-of-contents)
+  - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
+    - [Replace Contents Tags](#replace-contents-tags)
+
+<contents-finish />
+
+...
+...
+```
+
+Note, that the insertion **replaces everything** inside the tags!
+
+That's why, you can call it each time you update your markdown file to automatically update the table of contents. In common, these tags won't be shown and you can leave them in sorce code if you preffer.
+
+#### Replace Contents Tags
+
+It you'd like to insert table of contents but don't want to leave these contents tags, just call the command with both `--insert` and `--replace-tags` flags:
+```shell
+md-contents-generator README.md --insert --replace-tags
+```
+
+However, in this case, you will not be able to update you table of contents, and will have to generate and insert the table of contents each time manually.
