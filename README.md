@@ -35,5 +35,3 @@ python setup.py
 ### Generate Contents
 
 ### Insert Contents into a file
-
-## Test content (!@#$%^&*()_+=-~/?,.\|{}[]№;%ґ:'") item
