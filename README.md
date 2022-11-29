@@ -2,8 +2,6 @@
 
 Generate table of contents for markdown files.
 
-<contents-start style="display: none" />
-
 - [Installation](#installation)
   - [Install via PIP](#install-via-pip)
   - [Install from Source](#install-from-source)
@@ -11,8 +9,6 @@ Generate table of contents for markdown files.
   - [Generate Table of Contents](#generate-table-of-contents)
   - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
     - [Replace Contents Tags](#replace-contents-tags)
-
-<contents-finish style="display: none" />
 
 ## Installation
 
