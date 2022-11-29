@@ -105,7 +105,7 @@ That's why, you can call it each time you update your markdown file to automatic
 
 #### Replace Contents Tags
 
-It you'd like to insert table of contents but don't want to leave these contents tags, just call the command with both `--insert` and `--replace-tags` flags:
+If you'd like to insert table of contents but don't want to leave these contents tags, just call the command with both `--insert` and `--replace-tags` flags:
 ```shell
 md-contents-generator README.md --insert --replace-tags
 ```
