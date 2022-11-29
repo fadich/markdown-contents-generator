@@ -2,7 +2,7 @@
 
 Generate table of contents for markdown files.
 
-<contents-start />
+<contents-start style="display: none" />
 
 - [Installation](#installation)
   - [Install via PIP](#install-via-pip)
@@ -12,7 +12,7 @@ Generate table of contents for markdown files.
   - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
     - [Replace Contents Tags](#replace-contents-tags)
 
-<contents-finish />
+<contents-finish style="display: none" />
 
 ## Installation
 
@@ -102,6 +102,8 @@ Result should be like this:
 Note, that the insertion **replaces everything** inside the tags!
 
 That's why, you can call it each time you update your markdown file to automatically update the table of contents. In common, these tags won't be rendered, and you can leave them in the source code if you prefer.
+
+You can also add `style="display: none"` (or any other attributes) for your tags if needed. The only necessary is to keep the tags naming and put single tag on a single line (multiline tags do not supported).
 
 #### Replace Contents Tags
 
