@@ -2,32 +2,17 @@
 
 Generate table of contents for markdown files.
 
-- [Installation](#installation)
-  - [Install via PIP](#install-via-pip)
-  - [Install from Source](#install-from-source)
+<a style="display: none"><contents-start /></a>
+
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
   - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
     - [Replace Contents Tags](#replace-contents-tags)
+- [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
+  - [Install from Source](#install-from-source)
 
-## Installation
-
-### Install via PIP
-
-Install via python _pip_ (python3 required):
-```shell
-pip install markdown-contents-generator --user
-```
-
-### Install from Source
-
-Clone git-repository and make setup inside the project directory:
-```shell
-git clone https://github.com/fadich/markdown-contents-generator.git \
-  && cd markdown-contents-generator
-
-python3 setup.py install
-```
+<a style="display: none"><contents-finish /></a>
 
 ## Usage
 
@@ -47,13 +32,13 @@ md-contents-generator README.md
 
 You will see something like that (for this README.md file):
 ```markdown
-- [Installation](#installation)
-  - [Install via PIP](#install-via-pip)
-  - [Install from Source](#install-from-source)
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
   - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
     - [Replace Contents Tags](#replace-contents-tags)
+- [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
+  - [Install from Source](#install-from-source)
 ```
 
 You can copy-paste it to the file you need or make auto-insertion to your working file (see below).
@@ -82,13 +67,13 @@ Result should be like this:
 
 <contents-start />
 
-- [Installation](#installation)
-  - [Install via PIP](#install-via-pip)
-  - [Install from Source](#install-from-source)
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
   - [Insert Table of Contents into a File](#insert-table-of-contents-into-a-file)
     - [Replace Contents Tags](#replace-contents-tags)
+- [Installation](#installation)
+  - [Install via PIP](#install-via-pip)
+  - [Install from Source](#install-from-source)
 
 <contents-finish />
 
@@ -109,3 +94,22 @@ md-contents-generator README.md --insert --replace-tags
 ```
 
 However, in this case, you will not be able to update you table of contents, and will have to generate and insert the table of contents each time manually.
+
+## Installation
+
+### Install via PIP
+
+Install via python _pip_ (python3 required):
+```shell
+pip install markdown-contents-generator --user
+```
+
+### Install from Source
+
+Clone git-repository and make setup inside the project directory:
+```shell
+git clone https://github.com/fadich/markdown-contents-generator.git \
+  && cd markdown-contents-generator
+
+python3 setup.py install
+```
