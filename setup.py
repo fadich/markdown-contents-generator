@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name="markdown_contents_generator",
-    version="0.1.6",
+    version="0.1.7-keywords",
     keywords=[
         "markdown-contents-generator",
         "md-contents-generator",
@@ -20,6 +20,11 @@ setup(
         "contents-generator",
         "generator",
         "content",
+        "content-generator",
+        "table-of-contents",
+        "table-contents",
+        "contents-table",
+        "content-table",
     ],
     url="https://github.com/fadich/markdown-contents-generator",
     author="Fadi A.",
