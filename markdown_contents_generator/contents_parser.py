@@ -35,7 +35,7 @@ class ContentsParser:
                 level=head,
                 raw_line=item,
                 content_line=re.sub(
-                    r"[^a-zA-Z0-9]+",
+                    r"[^\w0-9\_]+",
                     "-",
                     item
                 ).lower().strip("-")
