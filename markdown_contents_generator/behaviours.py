@@ -86,11 +86,11 @@ class FileUpdater:
 
     @classmethod
     def is_opening_tag(cls, line: str) -> bool:
-        return bool(re.match(r"^\<\s*contents-start.*/>$", line.strip()))
+        return bool(re.match(r"^.*\<\s*contents-start.*/>.*$", line))
 
     @classmethod
     def is_closing_tag(cls, line: str) -> bool:
-        return bool(re.match(r"^\<\s*contents-finish.*/>$", line.strip()))
+        return bool(re.match(r"^.*\<\s*contents-finish.*/>.*$", line))
 
     def _update_content(self, replace_tags: bool = False) -> int:
         inserted_count = 0

@@ -32,9 +32,10 @@ class ContentsBuilder:
                 yield self._format_item(item)
 
     def _format_item(self, item: ContentsItem) -> str:
-        margin = item.level - (0 if self._save_margin else self._higher)
+        margin_times = item.level - (0 if self._save_margin else self._higher)
+
         return "{}{}[{}](#{})".format(
-            self._margin * margin,
+            self._margin * margin_times,
             self._prefix,
             item.raw_line,
             item.content_line

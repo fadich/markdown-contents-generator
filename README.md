@@ -14,14 +14,14 @@ Generate contents for markdown files.
 
 ## Installation
 
-Install via python _pip_
+Install via python _pip_:
 ```shell
 pip install markdown-contents-generator
 ```
 
 ### Install from Source
 
-Clone git-repository and make setup inside the project directory
+Clone git-repository and make setup inside the project directory:
 ```shell
 git clone https://github.com/fadich/markdown-contents-generator.git \
   && cd markdown-contents-generator

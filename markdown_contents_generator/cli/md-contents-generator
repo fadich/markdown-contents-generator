@@ -39,8 +39,8 @@ def main():
         "-m", "--margin",
         metavar="MARGIN",
         type=str,
-        default=" ",
-        help="Margin string (default: \"  \" [SPACE])"
+        default="  ",
+        help="Margin string (default: \"  \" [SPACE+SPACE])"
     )
     parser.add_argument(
         "-p", "--prefix",
@@ -61,7 +61,7 @@ def main():
              "(when insert flag provided)"
     )
     parser.add_argument(
-        "--force-margin",
+        "--force-margin", "--save-margin",
         action="store_true",
         help="Save margin for higher level, if it is greater then 1"
     )
