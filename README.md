@@ -2,7 +2,7 @@
 
 Generate table of contents for markdown files.
 
-<a style="display: none"><contents-start /></a>
+<a style="visibility: hidden; display: none"><contents-start /></a>
 
 - [Usage](#usage)
   - [Generate Table of Contents](#generate-table-of-contents)
@@ -12,7 +12,7 @@ Generate table of contents for markdown files.
   - [Install via PIP](#install-via-pip)
   - [Install from Source](#install-from-source)
 
-<a style="display: none"><contents-finish /></a>
+<a style="visibility: hidden; display: none"><contents-finish /></a>
 
 ## Usage
 
