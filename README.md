@@ -9,7 +9,6 @@ Generate contents for markdown files.
 - [Usage](#usage)
   - [Generate Contents](#generate-contents)
   - [Insert Contents into a file](#insert-contents-into-a-file)
-- [Test content (!@#$%^&*()_+=-~/?,.\|{}[]№;%ґ:'") item](#test-content-_-ґ-item)
 
 <contents-finish />
 
