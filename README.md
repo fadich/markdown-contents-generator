@@ -101,7 +101,7 @@ Result should be like this:
 
 Note, that the insertion **replaces everything** inside the tags!
 
-That's why, you can call it each time you update your markdown file to automatically update the table of contents. In common, these tags won't be shown and you can leave them in sorce code if you preffer.
+That's why, you can call it each time you update your markdown file to automatically update the table of contents. In common, these tags won't be rendered, and you can leave them in the source code if you prefer.
 
 #### Replace Contents Tags
 
