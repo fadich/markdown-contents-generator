@@ -31,14 +31,12 @@ class ContentsParser:
             head = len(match.group(0))  # Number of sharps
             item = line[head:].strip()
 
-            print(item)
-
             yield ContentsItem(
                 level=head,
                 raw_line=item,
                 content_line=re.sub(
-                    r"[^a-zA-Z0-9]?",
-                    "",
+                    r"[^a-zA-Z0-9]+",
+                    "-",
                     item
-                ).lower()
+                ).lower().strip("-")
             )
