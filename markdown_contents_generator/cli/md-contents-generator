@@ -48,8 +48,8 @@ def main():
         "-m", "--margin",
         metavar="MARGIN",
         type=str,
-        default="  ",
-        help="Margin string (default: \"%(default)s\" [TWO SPACES])"
+        default="    ",
+        help="Margin string (default: \"%(default)s\" [FOUR SPACES])"
     )
     parser.add_argument(
         "-p", "--prefix",

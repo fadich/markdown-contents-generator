@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name="markdown_contents_generator",
-    version="0.1.9",
+    version="0.2.0",
     keywords=[
         "markdown-contents-generator",
         "md-contents-generator",
